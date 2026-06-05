@@ -8,7 +8,7 @@ header, hgroup, footer, figure, figcaption, aside, section, article {
 
 /* Page background */
 html {
-	background-image: url("ptrbackground.jpg");
+	background-image: url("images/ptrbackground.jpg");
 	background-color: #00569f;
 	background-repeat: repeat-x;
 	height: 1250px;
@@ -35,7 +35,7 @@ body {
 header {
 	grid-area: header;
 	background-color: #000033;
-	background-image: url("sunset.jpg");
+	background-image: url("images/sunset.jpg");
 	background-position: right;
 	background-repeat: no-repeat;
 	color: white;
@@ -89,7 +89,7 @@ nav a:hover {
 	margin-top: 0px;
 	margin-bottom: 10px;
 	list-style-position: inside;
-	list-style-image: url("marker.gif");
+	list-style-image: url("images/marker.gif");
 }
 #contact {
 	font-size: 90%;
