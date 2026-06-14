@@ -1,51 +1,98 @@
-// create a table (5 by 5)
+/* 
+File: main.js
+*/
+
+// Constructor function for TableCanvas object
 function TableCanvas(rowMin, rowMax, colMin, colMax) {
+    // Properties
     this.rowMin = rowMin
     this.rowMax = rowMax
     this.colMin = colMin
     this.colMax = colMax
+
+    // Methods
     this.draw = function () {
-        var table = document.getElementById("matrix")
+        var table = document.getElementById("multiplication-table")
         // reset table
         table.innerHTML = ""
 
-        var row = document.createElement("TR")
-        table.appendChild(row)
+        // build header
+        var thead = document.createElement("thead")
+        table.appendChild(thead)
 
-        // draw header
-        var emptyTh = document.createElement("TH")
+        var headerRow = document.createElement("tr")
+        thead.appendChild(headerRow)
+
+        
+        var emptyTh = document.createElement("th")
         emptyTh.textContent = ' '
-        row.appendChild(emptyTh)
+        headerRow.appendChild(emptyTh)
         for (let i = this.colMin; i < this.colMax + 1; i++) {
-            var th = document.createElement("TH")
+            var th = document.createElement("th")
             th.textContent = i.toString()
-            row.appendChild(th)
+            headerRow.appendChild(th)
         }
 
-        // draw body
-        for (let j = this.rowMin; j < this.rowMax + 1; j++) {
-            var newRow = document.createElement("TR")
-            table.appendChild(newRow)
+        var tbody = document.createElement("tbody")
+        table.appendChild(tbody)
 
-            var rowHeader = document.createElement("TH")
+        // build body
+        for (let j = this.rowMin; j < this.rowMax + 1; j++) {
+            var newRow = document.createElement("tr")
+            tbody.appendChild(newRow)
+
+            var rowHeader = document.createElement("th")
+            rowHeader.setAttribute("scope", "row")
             rowHeader.textContent = j.toString()
             newRow.appendChild(rowHeader)
 
             for (let k = this.colMin; k < this.colMax + 1; k++) {
-                var td = document.createElement("TD")
-                td.textContent = j.toString() * k.toString()
+                var td = document.createElement("td")
+                td.textContent = (j * k).toString()
                 newRow.appendChild(td)
             }
         }
     }
 }
 
+// Function to draw table 
 function drawTable() {
+    // input validation
     var minRowsElement = document.getElementById("inputRowMin")
     var maxRowsElement = document.getElementById("inputRowMax")
     var minColsElement = document.getElementById("inputColMin")
     var maxColsElement = document.getElementById("inputColMax")
 
+    if (minRowsElement.value == "" || maxRowsElement.value == "" || 
+        minColsElement.value == "" || maxColsElement.value == ""
+    ) {
+        var formErrorLabel = document.getElementById("formError")
+        formErrorLabel.textContent = "Please specify ALL minimum and maximum values..."
+        return
+    }
+
+    if (Number(minRowsElement.value) < -50 || Number(minRowsElement.value) > 50
+        || Number(maxRowsElement.value) < -50 || Number(maxRowsElement.value) > 50
+        || Number(minColsElement.value) < -50 || Number(minColsElement.value) > 50 
+        || Number(maxColsElement.value) < -50 || Number(maxColsElement.value) > 50
+    ) {
+        var formErrorLabel = document.getElementById("formError")
+        formErrorLabel.textContent = "Please enter valid minimum and maximum values between -50 and 50"
+        return
+    }
+
+    if (minRowsElement.value >= maxRowsElement.value
+        || minColsElement.value >= maxColsElement.value
+    ) {
+        var formErrorLabel = document.getElementById("formError")
+        formErrorLabel.textContent = "Please enter minimum values that are smaller than the maximum values"
+        return
+    }
+
+    // validation passed so draw table
+    var formErrorLabel = document.getElementById("formError")
+    formErrorLabel.textContent = ""
+    
     var table = new TableCanvas(
         Number(minRowsElement.value), 
         Number(maxRowsElement.value), 

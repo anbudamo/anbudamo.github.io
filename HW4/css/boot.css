@@ -1,0 +1,16 @@
+.table tbody th,
+.table thead th:first-child {
+    border-right-width: 1px;
+    border-right-style: solid;
+    position: sticky;
+    left: 0;
+}
+
+.table thead th:first-child {
+    min-width: 220px;
+}
+
+.table tr {
+    vertical-align: middle;
+}
+

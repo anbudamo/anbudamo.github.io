@@ -1,25 +1,9 @@
+/*
+File: style.css
+*/
+
 /* Table styling */
-#matrix {
-    table-layout: auto;
-    width: max-content;
-
-}
-
-#matrix th, 
-#matrix td {
-    width: 60px;
+.table th, td {
+    min-width: 50px;
     text-align: center;
-    padding: 0;
-    vertical-align: middle;
-}
-
-#matrix th {
-    background-color:darkslateblue;
-    color: white;
-}
-
-#tableContainer {
-    min-width: 100%;
-    height: 400px;
-    overflow: auto; 
 }

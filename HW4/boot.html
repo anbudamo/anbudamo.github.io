@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="css/boot.css" rel="stylesheet">
+</head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <div class="container">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="emailInput">Email</label>
+                <input class="form-control" id="emailInput" type="email"></input>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="passwordInput">Password</label>
+                <input class="form-control" id="passwordInput" type="password"></input>
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label" for="addressInput">Address</label>
+                <input class="form-control" id="addressInput" type="text" placeholder="1234 Lowell Avenue"></input>
+            </div>
+
+            <div class="col-md-8">
+                <label class="form-label" for="cityInput">City</label>
+                <input class="form-control" id="cityInput" type="text"></input>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label" for="stateSelect">State</label>
+                <select class="form-select" id="stateSelect" type="text">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <label class="form-label" for="zipInput">Zip</label>
+                <input class="form-control" id="zipInput" type="text" placeholder=""></input>
+            </div>
+            
+            <div class="col-md-12">
+                <div class="form-check">
+                    <input class="form-check-input"></input>
+                    <label class="form-check-lable">Check me out</label>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <button type="Submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
+
+        <div class="table-responsive" style="max-width: 530px;">
+            <table class="table border table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Last price</th>
+                        <th scope="col">Total gain/loss</th>
+                        <th scope="col">Current Value</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Cash</th>
+                        <td></td>
+                        <td class="text-success"></td>
+                        <td>$11,506.02</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>AAPL</div>
+                            <div class="text-muted">APPLE INC</div>
+                        </th>
+                        <td>$291.13</td>
+                        <td class="text-success">+$353.67</td>
+                        <td>$1352.29</td>
+                        <td>4.645</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>AMAT</div>
+                            <div class="text-muted">APPLIED MATERIALS INC</div>
+                        </th>
+                        <td>$567.25</td>
+                        <td class="text-success">+$858.42</td>
+                        <td>$1,237.73</td>
+                        <td>2.182</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>AOA</div>
+                            <div class="text-muted">ISHARS AGGRESSIVE ALLOCATION ETF</div>
+                        </th>
+                        <td>$97.22</td>
+                        <td class="text-success">+$143.58</td>
+                        <td>$1,158.08</td>
+                        <td>11.912</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>DELL</div>
+                            <div class="text-muted">DELL TECHNOLOGIES INC</div>
+                        </th>
+                        <td>$395.57</td>
+                        <td class="text-success">+$985.64</td>
+                        <td>$1,385.28</td>
+                        <td>3.502</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>FDEM</div>
+                            <div class="text-muted">FIDELITY EMERGING MARKETS ETF</div>
+                        </th>
+                        <td>$36.89</td>
+                        <td class="text-success">+$43.76</td>
+                        <td>$187.73</td>
+                        <td>5.089</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>FDEV</div>
+                            <div class="text-muted">FIDELITY INTERNATIONAL VALUE ETF</div>
+                        </th>
+                        <td>$36.40</td>
+                        <td class="text-success">+$44.42</td>
+                        <td>$249.37</td>
+                        <td>6.851</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>FELC</div>
+                            <div class="text-muted">FIDELITY ENHANCED LARGE CAP ETF</div>
+                        </th>
+                        <td>$41.53</td>
+                        <td class="text-success">+$84.07</td>
+                        <td>$482.99</td>
+                        <td>11.63</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>FESM</div>
+                            <div class="text-muted">FIDELITY ENHANCED SMALL CAP ETF</div>
+                        </th>
+                        <td>$46.33</td>
+                        <td class="text-success">+$37.81</td>
+                        <td>$150.71</td>
+                        <td>3.253</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>FIGB</div>
+                            <div class="text-muted">FIDELITY INVESTMENT GRADE BOND ETF</div>
+                        </th>
+                        <td>$42.89</td>
+                        <td class="text-success">+$6.06</td>
+                        <td>$506.01</td>
+                        <td>11.798</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div>FLDR</div>
+                            <div class="text-muted">FIDELITY LOW DURATION BOND ETF</div>
+                        </th>
+                        <td>$50.17</td>
+                        <td class="text-success">+$0.38</td>
+                        <td>$200.27</td>
+                        <td>3.992</td>
+                    </tr>
+                </tbody>
+                
+                
+            </table>
+        </div>
+        
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
