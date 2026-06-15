@@ -18,6 +18,7 @@ function TableCanvas(rowMin, rowMax, colMin, colMax) {
 
         // build header
         var thead = document.createElement("thead")
+        thead.classList.add('sticky-top')
         table.appendChild(thead)
 
         var headerRow = document.createElement("tr")
@@ -101,4 +102,8 @@ function drawTable() {
     )
     table.draw()
 }
+
+// event listeners
+var submitButton = document.getElementById("submit")
+submitButton.addEventListener("click", drawTable)
 

@@ -21,7 +21,7 @@ May be freely copied or excerpted for educational purposes with credit to the au
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- jquery ui stylesheet -->
-    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.14.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -34,41 +34,47 @@ May be freely copied or excerpted for educational purposes with credit to the au
         <!-- form -->
         <form id="multiplication-form" class="cmxform row g-3">
             <div class="col-md-6">
-                <label for="">Minimum Column Value</label>
-                <input id="inputColMin" class="form-control" name="colMin" type="number"
-                    placeholder="Enter number between -50 to 50"></input>
+                <label for="">Minimum Column Value (-50 to 50)</label>
+                <input id="inputColMin" class="form-control" name="colMin" type="number"></input>
+                <div id="sliderColMin" class="form-control"></div>
             </div>
             <div class="col-md-6">
-                <label for="">Maximum Column Value</label>
-                <input id="inputColMax" class="form-control" name="colMax" type="number"
-                    placeholder="Enter number between -50 to 50"></input>
+                <label for="">Maximum Column Value (-50 to 50)</label>
+                <input id="inputColMax" class="form-control" name="colMax" type="number"></input>
+                <div id="sliderColMax" class="form-control"></div>
             </div>
 
             <div class="col-md-6">
-                <label for="">Minimum Row Value</label>
-                <input id="inputRowMin" class="form-control" name="rowMin" type="number"
-                    placeholder="Enter number between -50 to 50"></input>
+                <label for="">Minimum Row Value (-50 to 50)</label>
+                <input id="inputRowMin" class="form-control" name="rowMin" type="number"></input>
+                <div id="sliderRowMin" class="form-control"></div>
             </div>
             <div class="col-md-6">
-                <label for="">Maximum Row Value</label>
-                <input id="inputRowMax" class="form-control" name="rowMax" type="number"
-                    placeholder="Enter number between -50 to 50"></input>
-            </div>
-
-            <!-- <div class="">
-                <label id="formError" class="text-danger"></label>
-            </div> -->
-
-            <!-- submit button -->
-            <div class="col-md-12">
-                <button id="submit" type="submit">Submit</button>
+                <label for="">Maximum Row Value (-50 to 50)</label>
+                <input id="inputRowMax" class="form-control" name="rowMax" type="number"></input>
+                <div id="sliderRowMax" class="form-control"></div>
             </div>
             
         </form>
 
         <!-- multiplication table -->
-        <div class="table-responsive" style="margin-top: 30px;">
+        <div id="multiplication-table-container" class="table-responsive" style="margin-top: 30px;">
             <table id="multiplication-table" class="table border table-bordered "></table>
+        </div>
+
+        <div>
+            <button id="save" type="button">Save table</button>
+        </div>
+
+        <!-- tabbed interface with default preview tab -->
+        <div id="tabs-container" class="col-md-12">
+            <ul>
+                <li><a href="#tab-1">Preview</a></li>
+            </ul>
+            <div id="tab-1">
+                <h3>Saved</h3>
+                <p>Save tables will appear here</p>
+            </div>
         </div>
 
     </div>
@@ -78,7 +84,8 @@ May be freely copied or excerpted for educational purposes with credit to the au
     <!-- load validation plugin -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
     <!-- load jquery ui plugin -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    <!-- load js file -->
     <script src="src/main.js"></script>
     
 </body>
