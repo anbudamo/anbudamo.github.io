@@ -4,10 +4,15 @@ File: style.css
 
 /* Table styling */
 .table-responsive {
-    max-height: 400px;
+    max-height: 300px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    
 }
 .table th, .table td {
-    min-width: 50px;
+    min-width: 40px;
     text-align: center;
 }
 
@@ -29,3 +34,29 @@ File: style.css
 .table th, .table tr:nth-child(even) td, .table tr td:nth-child(odd) {
     background-color: var(--bs-light);
 }
+
+/* slider */
+.ui-slider, label {
+    display: inline-block;
+}
+label {
+    min-width: 200px;
+}
+label.error {
+    color: red;
+    font-weight: 400;
+}
+.ui-slider {
+    align-self: center;
+    margin-bottom: 8px;
+    width: 100%;
+    /* margin-right: 30px;
+    min-width: 200px; */
+}
+
+form {
+    width: 40%;
+    padding: 25px;
+    min-width: 400px;
+}
+
