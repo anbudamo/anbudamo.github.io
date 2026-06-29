@@ -1,0 +1,94 @@
+/*
+File: style.css
+*/
+
+
+
+.scrabble-tile {
+    width: 38px;
+    height: 38px;
+}
+
+div:has(> #scrabble-board) {
+    margin: 30px auto;
+    width: max-content;
+}
+
+#scrabble-board {
+    display: block;
+    width: 613px;
+    height: 44px;
+}
+
+#scrabble-board-squares {
+    display: flex;
+    list-style-type: none;
+    gap: 2px;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#scrabble-board-squares li {
+    width: 38.8px;
+    height: 44px;
+}
+
+div:has(> #scrabble-holder) {
+    margin: 30px auto;
+    width: max-content;
+}
+#scrabble-holder {
+    display: block;
+    height: 91px;
+    width: 320px;
+}
+
+#scrabble-holder-squares {
+    display: flex;
+    list-style-type: none;
+    gap: 2px;
+    padding: 0;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#scrabble-holder-squares li {
+    width: 38.8px;
+    height: 44px;
+}
+
+[class^="square-"] {
+    width: 38.8px;
+    height: 44px;
+}
+
+table {
+    width: 100%;
+    min-height: 200px;
+    min-width: 270px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 10px 0px 10px 0px;
+    table-layout: fixed;
+}
+
+table th {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+table td {
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#button-console {
+    margin: 0px auto;
+    width: max-content;
+}

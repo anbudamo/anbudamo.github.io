@@ -1,0 +1,77 @@
+<!--
+File: index.html
+GUI Assignment:  Scrabble Game
+Anbu Damodaran, UMass Lowell Computer Science
+Copyright (c) 2026 by Anbu. All rights reserved. 
+May be freely copied or excerpted for educational purposes with credit to the author.
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crabble</title>
+    
+    <!-- load stylesheets -->
+    <!-- bootstapp stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- jquery ui stylesheet -->
+    <link href="https://code.jquery.com/ui/1.14.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th colspan="3">Scoreboard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Current<br><span id="score-display-current">0</span></td>
+                    <td>Total<br><span id="score-display-total">0</span></td>
+                    <td>Round<br><span id="round-display">1</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="position-relative">
+            <img id ="scrabble-board" src="img/Scrabble_Board_OneLine.png">
+            <ul id="scrabble-board-squares">
+
+            </ul>
+        </div>
+        
+        <div class="position-relative">
+            <img id="scrabble-holder" src="img/scrabble-tile-holder-406774_640.png">
+            <ul id="scrabble-holder-squares">
+
+            </ul>
+        </div>
+        
+        <div id="button-console">
+            <button id="restart" type="button">restart</button>
+            <button id="submit" type="submit">submit</button>
+        </div>
+        
+    </div>
+    
+    <!-- load jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- load validation plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
+    <!-- load jquery ui plugin -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    <!-- load js files -->
+     <script src="js/scrabble_info.js"></script>
+    <script src="js/scrabble_manager.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
