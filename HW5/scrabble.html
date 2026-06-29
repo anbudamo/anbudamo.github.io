@@ -25,6 +25,7 @@ May be freely copied or excerpted for educational purposes with credit to the au
 
 <body>
     <div class="container">
+        <!-- scoreboard using table -->
         <table class="table table-responsive">
             <thead>
                 <tr>
@@ -40,6 +41,7 @@ May be freely copied or excerpted for educational purposes with credit to the au
             </tbody>
         </table>
 
+        <!-- scrabble board -->
         <div class="position-relative">
             <img id ="scrabble-board" src="img/Scrabble_Board_OneLine.png">
             <ul id="scrabble-board-squares">
@@ -47,13 +49,21 @@ May be freely copied or excerpted for educational purposes with credit to the au
             </ul>
         </div>
         
-        <div class="position-relative">
-            <img id="scrabble-holder" src="img/scrabble-tile-holder-406774_640.png">
-            <ul id="scrabble-holder-squares">
+        <!-- scrabble holder and bag -->
+        <div id="holder-and-bag-group" class="d-flex gap-5">
+            <div class="position-relative">
+                <img id="scrabble-holder" src="img/scrabble-tile-holder-406774_640.png">
+                <ul id="scrabble-holder-squares">
 
-            </ul>
+                </ul>
+            </div>
+            <div>
+                <img id ="scrabble-bag" src="img/scrabble-bag.png">
+                <img id ="swap-tile" src="img/swap_icon.png">
+            </div>
         </div>
         
+        <!-- game buttons -->
         <div id="button-console">
             <button id="restart" type="button">restart</button>
             <button id="submit" type="submit">submit</button>

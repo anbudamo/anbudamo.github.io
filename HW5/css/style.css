@@ -1,14 +1,6 @@
-/*
-File: style.css
-*/
+/* File: style.css */
 
-
-
-.scrabble-tile {
-    width: 38px;
-    height: 38px;
-}
-
+/* Board styling */
 div:has(> #scrabble-board) {
     margin: 30px auto;
     width: max-content;
@@ -27,20 +19,18 @@ div:has(> #scrabble-board) {
     padding: 0;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 3px;
 }
 
-#scrabble-board-squares li {
-    width: 38.8px;
-    height: 44px;
-}
-
-div:has(> #scrabble-holder) {
+/* Holder and bag layout styling */
+#holder-and-bag-group {
     margin: 30px auto;
     width: max-content;
 }
+
+/* Tile holder styling */
 #scrabble-holder {
-    display: block;
+    display: inline-block;
     height: 91px;
     width: 320px;
 }
@@ -55,16 +45,26 @@ div:has(> #scrabble-holder) {
     top: 20px;
 }
 
-#scrabble-holder-squares li {
-    width: 38.8px;
-    height: 44px;
-}
-
+/* Tile square styling */
 [class^="square-"] {
     width: 38.8px;
-    height: 44px;
+    height: 39px;
 }
 
+/* Bag styling */
+#scrabble-bag {
+    display: inline-block;
+    width: 125px;
+    height: 112px;
+}
+
+/* Tile styling */
+.scrabble-tile {
+    width: 38px;
+    height: 38px;
+}
+
+/* Scoreboard styling */
 table {
     width: 100%;
     min-height: 200px;
@@ -88,7 +88,13 @@ table td {
     vertical-align: middle;
 }
 
+/* Button console styling */
 #button-console {
     margin: 0px auto;
     width: max-content;
+}
+
+#swap-tile {
+    width: 62px;
+    height: 56px;
 }

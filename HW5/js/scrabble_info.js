@@ -1,4 +1,5 @@
 /*  File: scrabble_info.js
+ *  Description: This file defines the starting Scrabble game data
  *  Author: Anbu Damodaran
  *  Credit: Scrabble_Pieces_Associative_Array example provided by Jesse M. Heines
  */

@@ -1,4 +1,6 @@
 /*  File: scrabble_manager.js
+ *  Description: This file manages the Scrabble game board, 
+ *  tile distribution, player interactions, and score calculation logic.
  *  Author: Anbu Damodaran
  */
 
@@ -115,7 +117,14 @@ class ScrabbleManager {
         const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ-'.split('')
         let letters = []
 
-        for (let i = 0; i < count; i++) {
+        let totalRemaining = 0;
+        for (let key in this.gameBag) {
+            totalRemaining += this.gameBag[key]['number-remaining'];
+        }
+
+        const tilesToDraw = Math.min(count, totalRemaining);
+
+        for (let i = 0; i < tilesToDraw; i++) {
             let letter = alphabet[Math.floor(Math.random() * 27)]
             
             // loop until we find a letter that is actually left in the bag
@@ -138,23 +147,25 @@ class ScrabbleManager {
         let letters = this.getNLetters($emptyHolderSquares.length)
 
         // create the hand with chosen letters
-        $emptyHolderSquares.each(function(index, element) {
+        for (let i = 0; i < letters.length; i++) {
+            console.log(letters[i])
+            let $element = $emptyHolderSquares.eq(i)
             // create tile
-            let link = 'img/Scrabble_Tiles/Scrabble_Tile_' + letters[index] + '.jpg'
+            let link = 'img/Scrabble_Tiles/Scrabble_Tile_' + letters[i] + '.jpg'
             let $tile = $('<img>', {
                 src: link,
                 class: 'scrabble-tile',
-                'data-letter': letters[index]
+                'data-letter': letters[i]
             })
 
             // add tile 
-            $(element).append($tile)
+            $element.append($tile)
             
             $tile.draggable({
                 stack: '.scrabble-tile', 
                 revert: 'invalid'
             })
-        })
+        }
     }
 
     clearHolderTiles() {
