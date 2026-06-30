@@ -262,7 +262,7 @@ class ScrabbleManager {
             finalScore = baseScore * wordMultiplier;
         }
 
-        if (notAWord()) {
+        if (this.notAWord()) {
             finalScore = 0
         }
 
