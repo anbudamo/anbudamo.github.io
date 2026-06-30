@@ -6,12 +6,31 @@
 
 class ScrabbleManager {
     constructor() {
+        // load dictionary 
+        this.loadDictionary()
+
         // set up scrabble board and holder
         this.buildBoard()
         this.buildHolder()
 
         // set up game state and starting tiles
         this.startGame()
+    }
+
+    async loadDictionary() {
+        try {
+            // fetch the text file from the same folder
+            const response = await fetch('dictionary.txt');
+            const text = await response.text();
+
+            const wordArray = text.split('\n').map(word => word.trim().toLowerCase());
+            
+            // wrap in a Set
+            this.dictionary = new Set(wordArray);
+            console.log("Dictionary loaded successfully!");
+        } catch (error) {
+            console.error("Failed to load dictionary:", error);
+        }
     }
 
     buildBoard() {
@@ -243,7 +262,22 @@ class ScrabbleManager {
             finalScore = baseScore * wordMultiplier;
         }
 
+        if (notAWord()) {
+            finalScore = 0
+        }
+
         $('#score-display-current').text(finalScore)
+    }
+
+    notAWord() {
+        // get the word on the board
+        let $tilesOnBoard = $('#scrabble-board-squares').find('.scrabble-tile')
+        let $wordOnBoard = ""
+        $tilesOnBoard.each(function(index, element) {
+            wordOnBoard += $(element).data('letter')
+        })
+
+        return this.dictionary.has(wordOnBoard.toLowerCase())
     }
 
     submitGame() {
