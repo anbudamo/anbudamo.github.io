@@ -27,7 +27,6 @@ class ScrabbleManager {
             
             // wrap in a Set
             this.dictionary = new Set(wordArray);
-            console.log(this.dictionary)
             console.log("Dictionary loaded successfully!");
         } catch (error) {
             console.error("Failed to load dictionary:", error);
