@@ -43,3 +43,8 @@
 
 * **User can always restart the game (4 pts)**
   * **Implementation:** I created a resetGame method that completely rebuilds the board and holder from scratch, resets the internal tile bag and board state arrays, and sets the current score, total score, and round displays back to their default values. This is bound to the restart button click event in main.js.
+
+## Bonus Features
+
+* **Accurately validating to see if a word that the user enters is valid (2 pts)**
+  * **Implementation:** I created a resetGame method that completely rebuilds the board and holder from scratch, resets the internal tile bag and board state arrays, and sets the current score, total score, and round displays back to their default values. This is bound to the restart button click event in main.js.
