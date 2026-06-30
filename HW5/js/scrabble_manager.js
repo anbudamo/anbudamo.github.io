@@ -27,6 +27,7 @@ class ScrabbleManager {
             
             // wrap in a Set
             this.dictionary = new Set(wordArray);
+            console.log(this.dictionary)
             console.log("Dictionary loaded successfully!");
         } catch (error) {
             console.error("Failed to load dictionary:", error);
@@ -277,7 +278,9 @@ class ScrabbleManager {
             wordOnBoard += $(element).data('letter')
         })
 
-        return this.dictionary.has(wordOnBoard.toLowerCase())
+        console.log(wordOnBoard)
+
+        return !this.dictionary.has(wordOnBoard.toLowerCase())
     }
 
     submitGame() {
