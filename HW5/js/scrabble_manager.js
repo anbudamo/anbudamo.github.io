@@ -272,7 +272,7 @@ class ScrabbleManager {
     notAWord() {
         // get the word on the board
         let $tilesOnBoard = $('#scrabble-board-squares').find('.scrabble-tile')
-        let $wordOnBoard = ""
+        let wordOnBoard = ""
         $tilesOnBoard.each(function(index, element) {
             wordOnBoard += $(element).data('letter')
         })
